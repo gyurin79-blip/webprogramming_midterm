@@ -1,0 +1,1701 @@
+@import url("https://fonts.googleapis.com/css2?family=Tektur:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+
+/* 기본 설정 */
+.poster {
+  width: 100%;
+  height: 100vh;
+  background-color: #0d1a3b;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-fill {
+  width: 100%;
+  height: 100%;
+}
+
+/* 배경: 레퍼런스의 가로 위치와 세로 구역 비율에 맞춘 설정 */
+.background-light {
+  width: 100%;
+  height: 66vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.sky-top,
+.sky-middle,
+.sky-small,
+.sky-bottom {
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+/* 윗부분 배경 */
+.sky-top {
+  top: 0;
+  height: 53.41%;
+}
+
+.sky-top .top-left,
+.sky-top .top-right {
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.sky-top .top-left {
+  width: 72.5843%;
+  left: 0;
+}
+
+.sky-top .top-right {
+  width: 27.4157%;
+  right: 0;
+}
+
+.sky-top .top-left,
+.sky-top .top-right,
+.sky-middle,
+.sky-small,
+.sky-bottom {
+  animation: sky-move 6s ease-in-out infinite alternate;
+}
+
+/* top-left: 위아래 색 변화 + 가로 색 배치 */
+.sky-top .top-left {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(115, 147, 238, 0.9232) 0%,
+      rgba(115, 147, 238, 0.9232) 1.471%,
+      rgba(117, 148, 245, 0.9129) 5%,
+      rgba(157, 147, 242, 0.6802) 32.059%,
+      rgba(181, 154, 241, 0.5556) 49.706%,
+      rgba(189, 161, 239, 0.5244) 57.941%,
+      rgba(193, 164, 240, 0.4876) 62.647%,
+      rgba(199, 176, 240, 0.4543) 70.882%,
+      rgba(202, 188, 239, 0.4282) 80.294%,
+      rgba(205, 188, 238, 0.418) 83.824%,
+      rgba(212, 189, 238, 0.3933) 85%,
+      rgba(254, 195, 242, 0.2792) 87.353%,
+      rgba(255, 201, 244, 0.25) 90.882%,
+      rgba(255, 200, 241, 0.2682) 95.588%,
+      rgba(252, 199, 241, 0.2757) 96.765%,
+      rgba(233, 193, 235, 0.3298) 99.118%,
+      rgba(233, 193, 235, 0.3298) 100%
+    ),
+    linear-gradient(
+      90deg,
+      #60aef9 0%,
+      #60aef9 0.31%,
+      #64aefa 1.548%,
+      #82b3e6 5.263%,
+      #93b9e0 7.74%,
+      #9cbadc 8.359%,
+      #95bbe3 8.978%,
+      #6fafef 9.598%,
+      #66aff7 10.217%,
+      #7ab3ee 11.455%,
+      #88b7e4 12.074%,
+      #8eb6e0 12.693%,
+      #77b2ec 13.313%,
+      #67aff5 13.932%,
+      #71b2f0 14.551%,
+      #9ec0dd 16.409%,
+      #95c1e6 17.028%,
+      #76b7f0 17.647%,
+      #78baf5 18.266%,
+      #aac8df 20.124%,
+      #aecde8 20.743%,
+      #88bdea 21.362%,
+      #77bdf5 21.981%,
+      #78c0fa 23.839%,
+      #98ccf0 27.554%,
+      #f3e6c6 34.985%,
+      #ffe8c4 36.223%,
+      #e9e9d6 36.842%,
+      #a7d0e0 37.461%,
+      #93cef2 38.08%,
+      #92d1f7 38.7%,
+      #a0d2f5 43.034%,
+      #a1d7f5 44.272%,
+      #a2d4ee 45.511%,
+      #a3d5f2 46.13%,
+      #acd6ef 51.084%,
+      #c8dddd 64.706%,
+      #dcdfd4 76.471%,
+      #e1e1cc 82.663%,
+      #e4e0d0 83.901%,
+      #e4e0cb 85.139%,
+      #e7e1c8 93.808%,
+      #e5e7c9 98.142%,
+      #e9edd1 99.381%,
+      #e9edd1 100%
+    );
+}
+
+/* top-right: 위아래 색 변화 + 가로 색 배치 */
+.sky-top .top-right {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(158, 200, 240, 0.6899) 0%,
+      rgba(158, 200, 240, 0.6899) 1.471%,
+      rgba(157, 199, 244, 0.6971) 3.824%,
+      rgba(163, 199, 242, 0.6961) 8.529%,
+      rgba(170, 202, 242, 0.7857) 10.882%,
+      rgba(172, 202, 242, 0.8112) 12.059%,
+      rgba(173, 202, 242, 0.8033) 13.235%,
+      rgba(172, 200, 243, 0.6412) 16.765%,
+      rgba(176, 201, 245, 0.601) 19.118%,
+      rgba(177, 200, 241, 0.615) 23.824%,
+      rgba(183, 202, 243, 0.6009) 29.706%,
+      rgba(189, 205, 242, 0.6497) 34.412%,
+      rgba(190, 205, 241, 0.5655) 39.118%,
+      rgba(195, 208, 241, 0.5903) 43.824%,
+      rgba(197, 210, 243, 0.5396) 48.529%,
+      rgba(201, 217, 241, 0.4929) 62.647%,
+      rgba(205, 229, 241, 0.4349) 76.765%,
+      rgba(204, 228, 240, 0.4237) 77.941%,
+      rgba(199, 227, 236, 0.3417) 80.294%,
+      rgba(208, 230, 235, 0.426) 83.824%,
+      rgba(211, 227, 236, 0.6135) 86.176%,
+      rgba(212, 227, 235, 0.6512) 87.353%,
+      rgba(214, 227, 235, 0.6505) 88.529%,
+      rgba(215, 227, 235, 0.6242) 89.706%,
+      rgba(213, 229, 234, 0.499) 92.059%,
+      rgba(207, 227, 235, 0.4837) 94.412%,
+      rgba(203, 227, 234, 0.3549) 95.588%,
+      rgba(199, 230, 232, 0.25) 96.765%,
+      rgba(204, 230, 236, 0.2945) 97.941%,
+      rgba(207, 229, 238, 0.3069) 99.118%,
+      rgba(207, 229, 238, 0.3069) 100%
+    ),
+    linear-gradient(
+      90deg,
+      #505adb 0%,
+      #505adb 0.82%,
+      #4960ee 2.459%,
+      #4a64f4 4.098%,
+      #4f68f2 7.377%,
+      #5f77ee 12.295%,
+      #7180e7 13.934%,
+      #7b8eec 17.213%,
+      #929fe3 20.492%,
+      #a7ace1 22.131%,
+      #abb2e6 25.41%,
+      #babbe8 27.049%,
+      #c1c1eb 28.689%,
+      #c3caed 30.328%,
+      #b9d8f3 31.967%,
+      #a8d7f2 33.607%,
+      #8cb2ed 38.525%,
+      #a3baf2 43.443%,
+      #e0daf8 53.279%,
+      #e4ddf4 54.918%,
+      #e7e8df 63.115%,
+      #e0ece5 64.754%,
+      #c4e8f0 66.393%,
+      #a5d2f0 68.033%,
+      #a3c5f0 69.672%,
+      #b8cdf6 71.311%,
+      #d1daf7 72.951%,
+      #e3e5f4 74.59%,
+      #eaebec 76.23%,
+      #e2efea 77.869%,
+      #c2e9ef 79.508%,
+      #a5d1eb 81.148%,
+      #aacbf2 82.787%,
+      #c1d6f7 84.426%,
+      #d7e2f4 86.066%,
+      #e8ecf2 87.705%,
+      #ecf2ec 89.344%,
+      #e2f7ee 90.984%,
+      #c6eef0 92.623%,
+      #abd8ec 94.262%,
+      #aacfec 95.902%,
+      #bfdbe7 99.18%,
+      #bfdbe7 100%
+    );
+}
+
+.sky-middle {
+  top: 53.41%;
+  height: 24.15%;
+  background: linear-gradient(
+    90deg,
+    #f4d5f0 0%,
+    #f3d4f7 0.225%,
+    #e5cbfb 0.562%,
+    #8a9ff6 1.573%,
+    #799af0 1.91%,
+    #7ba0ef 2.022%,
+    #90bef3 2.247%,
+    #aed7f0 2.472%,
+    #d0e7eb 2.697%,
+    #dee8e5 2.809%,
+    #efe2db 3.034%,
+    #f5dadc 3.371%,
+    #f1d8e7 4.382%,
+    #f3cff5 4.831%,
+    #f0cffc 5.281%,
+    #d3c0f6 5.955%,
+    #a2adf8 6.966%,
+    #8099f4 7.865%,
+    #7399f1 8.315%,
+    #7fabf6 8.652%,
+    #8fc5f9 8.989%,
+    #99d0f5 9.213%,
+    #b5e0ee 9.551%,
+    #dce7e8 9.888%,
+    #f0dfdb 10.225%,
+    #f4dbd6 10.562%,
+    #f3d0fa 12.921%,
+    #edcafa 13.371%,
+    #dbc4fa 13.933%,
+    #dac3f7 14.35%,
+    #a9affc 15.3%,
+    #669bfa 16.2%,
+    #9bdff2 17.4%,
+    #fbdfd9 18.2%,
+    #fbcdf1 20.1%,
+    #c3b6fc 22%,
+    #659afa 23.9%,
+    #a0e0ef 24.5%,
+    #fbded7 25.2%,
+    #f4c8f5 27%,
+    #769cfc 29.5%,
+    #a7e6ee 30.1%,
+    #faddda 31%,
+    #f9caf5 33%,
+    #7b9dfb 34.8%,
+    #b3e8ef 35.6%,
+    #ffdfd9 36.2%,
+    #f7c8f7 38.7%,
+    #7199fc 40.3%,
+    #b2e9ef 41.1%,
+    #fbdcdb 42%,
+    #facaf6 45%,
+    #719afd 46.7%,
+    #a6e4f0 47.3%,
+    #ffded8 48%,
+    #f9caf4 51.6%,
+    #6a9afa 53.2%,
+    #b0e8f0 54%,
+    #fddcd9 55%,
+    #f7c8f6 58%,
+    #769cfc 60%,
+    #a5e4f1 61%,
+    #ffded9 61.6%,
+    #facbf5 64%,
+    #719bfb 65.7%,
+    #b1e8ef 66.4%,
+    #ffded9 67%,
+    #f9c9f5 70%,
+    #729afa 71.6%,
+    #b4e8ef 72.1%,
+    #ffded9 72.6%,
+    #f6c8f6 74%,
+    #729bfc 75.3%,
+    #a7e5ef 76%,
+    #ffded9 76.7%,
+    #f8caf6 78%,
+    #769cfc 79.8%,
+    #b1e6ef 80.7%,
+    #fadddc 81.2%,
+    #f6caf7 83%,
+    #779cfb 84%,
+    #ecd2ed 84.89%,
+    #d5c5f1 85.44%,
+    #94aafe 85.99%,
+    #609fee 86.54%,
+    #c3e5f5 87.09%,
+    #fcd5ea 87.65%,
+    #e6c8fe 88.2%,
+    #94a8ff 88.75%,
+    #60a2ec 89.3%,
+    #cfc2f9 89.326%,
+    #94a4f7 89.888%,
+    #7f99eb 90.112%,
+    #7a9ae7 90.225%,
+    #7da3e7 90.337%,
+    #87b1eb 90.449%,
+    #96c0f0 90.562%,
+    #abd2f2 90.674%,
+    #d0e3f3 90.899%,
+    #e3e4ef 91.011%,
+    #ebe0e9 91.124%,
+    #efdbe4 91.236%,
+    #f3d7e8 91.461%,
+    #f0d1f4 91.798%,
+    #e2caf8 92.022%,
+    #aeaff6 92.472%,
+    #9aa6f6 92.697%,
+    #7999e7 93.034%,
+    #83ace9 93.258%,
+    #91bbec 93.371%,
+    #a2caf0 93.483%,
+    #cee7f6 93.708%,
+    #dbe7f1 93.82%,
+    #ecdce1 94.045%,
+    #f3d8e1 94.27%,
+    #f3d1f7 95.056%,
+    #f1cffb 95.393%,
+    #bfeffc 99.888%
+  );
+}
+
+.sky-small {
+  top: 77.56%;
+  height: 8.98%;
+  background: linear-gradient(
+    90deg,
+    #8ec2f6 0%,
+    #80aef8 0.337%,
+    #7399f3 0.674%,
+    #7595f4 0.899%,
+    #b7b1f7 2.584%,
+    #cec3fa 3.258%,
+    #e3c9fa 3.708%,
+    #e4d2fa 4.045%,
+    #ddd2f7 4.157%,
+    #c4d3ed 4.382%,
+    #bad3ed 4.494%,
+    #c1d9f0 4.831%,
+    #c6daeb 5.056%,
+    #bbd8e2 5.618%,
+    #bdd9e1 5.73%,
+    #c5d8e1 5.843%,
+    #e2dae2 6.067%,
+    #ecdee4 6.292%,
+    #e6e4e2 6.517%,
+    #cfe6ed 6.742%,
+    #bddff1 6.854%,
+    #84acec 7.191%,
+    #7ca0eb 7.303%,
+    #7b9bec 7.416%,
+    #95a6f6 7.753%,
+    #e3c8fa 8.427%,
+    #efd1f9 8.652%,
+    #f2d6f0 8.876%,
+    #eedae4 9.213%,
+    #e5e0ea 9.438%,
+    #dae2f1 9.551%,
+    #c3def5 9.663%,
+    #97c4f3 9.888%,
+    #88b4f1 10%,
+    #7a9ded 10.225%,
+    #7c9aeb 10.337%,
+    #839ded 10.449%,
+    #acb1f8 10.787%,
+    #c3b9f8 11.011%,
+    #d4c0fa 11.124%,
+    #e9cafa 11.348%,
+    #f1d2f6 11.573%,
+    #f2daeb 11.91%,
+    #ebe0e7 12.247%,
+    #cfdff1 12.472%,
+    #b9daf7 12.584%,
+    #94bff4 12.809%,
+    #82aaf0 12.921%,
+    #7a9eee 13.034%,
+    #7a99ee 13.146%,
+    #8c9ff3 13.371%,
+    #dfccfb 14.157%,
+    #e5cffa 14.27%,
+    #c0b7fd 14.35%,
+    #f7d2fa 14.91%,
+    #f7dfde 15.6%,
+    #83ccf4 16.3%,
+    #739cf8 17.2%,
+    #c8b9fd 18.3%,
+    #f8cef8 19.4%,
+    #fadddf 20.5%,
+    #94d9f2 21.4%,
+    #719cf8 22.3%,
+    #c5b7fd 23.4%,
+    #f9cef8 24.6%,
+    #fadddf 25.6%,
+    #96d9f2 26.5%,
+    #709bf8 27.4%,
+    #c2b5fd 28.4%,
+    #f8cdf7 29.6%,
+    #fbdcde 30.8%,
+    #9adcf2 31.6%,
+    #719cf7 32.5%,
+    #c9b8fe 33.7%,
+    #f9cef7 35%,
+    #fadddf 36.4%,
+    #95d8f3 37.2%,
+    #709bf9 38.2%,
+    #c7b7fd 39.4%,
+    #facdf8 40.8%,
+    #fadddf 42.1%,
+    #92d8f2 43%,
+    #719cf8 44%,
+    #c6b7fd 45.4%,
+    #f8cef7 47%,
+    #fbdddf 48.3%,
+    #9adbf2 49.2%,
+    #739cf8 50.2%,
+    #c7b7fd 51.6%,
+    #f9cef7 53.1%,
+    #fbdcde 54.5%,
+    #95d9f3 55.4%,
+    #709bf8 56.4%,
+    #c3b6fd 57.8%,
+    #facdf7 59.1%,
+    #fadddf 60.5%,
+    #95d9f2 61.4%,
+    #729bf8 62.4%,
+    #c9b8fd 63.8%,
+    #f8cdf7 65.2%,
+    #fadddf 66.7%,
+    #98daf2 67.6%,
+    #719cf8 68.6%,
+    #c6b6fd 70%,
+    #f9cef8 71.4%,
+    #fbdcde 72.8%,
+    #96d9f2 73.7%,
+    #729bf8 74.7%,
+    #c7b7fd 76.1%,
+    #f9cef8 77.6%,
+    #fbdddf 79%,
+    #97d9f2 80%,
+    #749bf8 81%,
+    #a9acfc 82.4%,
+    #c2b7fd 84.89%,
+    #d5beff 85.44%,
+    #f1c6ff 85.99%,
+    #dac2fa 86.517%,
+    #eccbfb 87.079%,
+    #f4d0f9 87.528%,
+    #f5d7e0 89.213%,
+    #f5d9df 89.775%,
+    #f2dfd6 90.225%,
+    #efe2d8 90.337%,
+    #dce7e2 90.562%,
+    #b7e2ee 90.787%,
+    #a9d8f1 90.899%,
+    #9ac8f4 91.011%,
+    #7ba0f1 91.348%,
+    #7898f0 91.461%,
+    #7c97f2 91.573%,
+    #8b9ff7 91.798%,
+    #bcb5f6 92.36%,
+    #e6cbfb 92.809%,
+    #f2d1f5 93.146%,
+    #f4d8e6 93.596%,
+    #f1dce1 93.82%,
+    #e7e5e8 94.045%,
+    #dae8ee 94.157%,
+    #c3e5f2 94.27%,
+    #a1d1f4 94.494%,
+    #93c2f5 94.607%,
+    #789cf0 94.944%,
+    #7796f0 95.056%,
+    #879df6 95.281%,
+    #e7cefb 96.404%,
+    #f3d3f3 96.742%,
+    #f3d9e5 97.191%,
+    #eedbdf 97.416%,
+    #ede0e1 97.528%,
+    #e5e4e6 97.64%,
+    #d6e5eb 97.753%,
+    #bee1f0 97.865%,
+    #9dd0f5 98.09%,
+    #8fbff6 98.202%,
+    #7ba4f0 98.427%,
+    #779bec 98.539%,
+    #7998eb 98.652%,
+    #8b9df1 98.876%,
+    #cfc0fa 99.663%,
+    #dec8fb 99.888%
+  );
+}
+
+.sky-bottom {
+  top: 86.54%;
+  height: 13.46%;
+  background: linear-gradient(
+    90deg,
+    #f4dfd4 0%,
+    #f5dcd4 0.787%,
+    #f5dbdb 1.236%,
+    #f1d9e1 2.36%,
+    #f3d0f0 4.719%,
+    #f3cffb 6.292%,
+    #d8c5f8 8.09%,
+    #c7bbf4 9.101%,
+    #b6b6f8 10.225%,
+    #acaff5 10.674%,
+    #a2aaf5 11.573%,
+    #8ea2f6 12.584%,
+    #829af4 13.82%,
+    #789af3 14.27%,
+    #6f98fd 14.35%,
+    #5898fd 14.91%,
+    #8ddcf4 16.3%,
+    #fbded9 16.55%,
+    #f9d0ef 21%,
+    #d4bdfb 25.5%,
+    #749bfb 30%,
+    #92dcf1 32%,
+    #fbded9 32.25%,
+    #f9d0ef 36.5%,
+    #d2bbfa 41%,
+    #749bfb 45%,
+    #94def1 47%,
+    #fbdfd9 47.25%,
+    #f7cfee 52%,
+    #d1bbfb 56.5%,
+    #729bfb 61%,
+    #96def2 63%,
+    #fbded9 63.25%,
+    #f8cfee 67.5%,
+    #d2bcfa 72%,
+    #739bfb 76.5%,
+    #94ddf2 78.5%,
+    #fbded9 78.75%,
+    #fbded9 84.89%,
+    #faddda 85.44%,
+    #f8d8de 85.99%,
+    #f3dadc 86.517%,
+    #f5d6e7 88.09%,
+    #f0d8ed 88.989%,
+    #f1d1ed 89.326%,
+    #f3d3f4 89.775%,
+    #f1ccf9 90.337%,
+    #eecffb 90.899%,
+    #e9c9f6 91.348%,
+    #c5b9f8 93.034%,
+    #b4b2f3 93.933%,
+    #91a2f7 95.843%,
+    #7392ef 97.64%,
+    #759af3 98.09%,
+    #97d0f9 99.888%
+  );
+}
+
+@keyframes sky-move {
+  0% {
+    background-position: 0px 0;
+  }
+  100% {
+    background-position: -80px 0;
+  }
+}
+
+.title {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 600;
+  width: 100%;
+  font-size: 20vh;
+
+  letter-spacing: 0.6vw;
+  color: #0a1545;
+  text-align: center;
+  padding-top: 0;
+  position: absolute;
+  top: 2vh;
+  left: 0;
+  cursor: pointer;
+
+  transition:
+    color 0.6s ease,
+    letter-spacing 0.6s ease,
+    transform 0.6s ease,
+    text-shadow 0.6s ease;
+}
+
+.title:hover {
+  color: #1748b9;
+  letter-spacing: 0.95vw;
+  transform: translateY(-4px);
+  text-shadow: 4px 5px 0 rgba(241, 196, 255, 0.8);
+}
+.scene {
+  width: 100%;
+  height: 36vh;
+  position: absolute;
+  top: 30vh;
+  left: 0;
+}
+
+.water {
+  width: 100%;
+  height: 34vh;
+  background-color: #0d1a3b;
+  position: absolute;
+  top: 66vh;
+  left: 0;
+  overflow: hidden;
+}
+
+/* 한옥 */
+.hanok {
+  width: 72vh;
+  display: block;
+  margin: 0 auto;
+
+  position: absolute;
+  bottom: -7vh;
+  left: 0;
+  right: 0;
+}
+
+/* 산 */
+.mountain-left {
+  width: 60vh;
+  position: absolute;
+  left: 50%;
+}
+
+.mountain-right {
+  width: 50vh;
+  position: absolute;
+  left: 50%;
+}
+
+.mountain-left {
+  bottom: -5vh;
+  margin-left: -68vh;
+}
+
+.mountain-right {
+  bottom: -3vh;
+  margin-left: 15vh;
+}
+
+/* 꽃 */
+.flower-left,
+.flower-right {
+  width: 58vh;
+  position: absolute;
+  bottom: 0;
+}
+
+.flower-left {
+  left: -8vh;
+  margin-left: 0;
+}
+
+.flower-right {
+  right: 0;
+}
+
+/* 나비 */
+.butterfly {
+  width: 250px;
+  position: absolute;
+  bottom: 80px;
+  left: 70%;
+  margin-left: 0;
+  animation: butterfly-float 6s ease-in-out infinite;
+}
+
+/* 나비마다 부모 크기에 맞춰 이미지 크기 조절 */
+.butterfly .butterfly-img,
+.butterfly .light-img {
+  width: 83.333%;
+  height: auto;
+}
+
+.butterfly .butterfly-img {
+  position: relative;
+}
+
+.butterfly .light-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.butterfly .light-back {
+  filter: blur(12px);
+}
+
+/* 왼쪽 작은 나비 */
+.butterfly-2 {
+  width: 300px;
+  left: 12%;
+  top: 35vh;
+  bottom: auto;
+
+  animation: butterfly-small 8s ease-in-out infinite;
+}
+
+/* 오른쪽 작은 나비 */
+.butterfly-3 {
+  width: 225px;
+  left: 80%;
+  top: 28vh;
+  bottom: auto;
+
+  animation: butterfly-small 11s ease-in-out infinite reverse;
+}
+
+@keyframes butterfly-small {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(-8deg);
+  }
+
+  33% {
+    transform: translate(45px, -35px) rotate(8deg);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) rotate(-5deg);
+  }
+}
+
+/* 양쪽 꽃잎 공통 설정 */
+.petal-left,
+.petal-right {
+  width: 75px;
+  position: absolute;
+  top: auto;
+  bottom: 3vh;
+
+  opacity: 0;
+  transform: rotate(-45deg);
+
+  animation-duration: 2.6s;
+  animation-timing-function: linear;
+  animation-fill-mode: backwards;
+}
+/* 왼쪽 꽃잎 출발 위치 */
+.petal-left {
+  left: 80%;
+}
+
+.petal-left.petal-2 {
+  left: 72%;
+}
+
+/* 오른쪽 꽃잎 출발 위치 */
+.petal-right {
+  left: 22%;
+  margin-top: 0;
+}
+.petal-right.petal-2 {
+  left: 28%;
+}
+
+.petal-right.petal-3 {
+  left: 34%;
+}
+
+/* 양쪽 두 번째 꽃잎은 0.5초 뒤 출발 */
+.petal-2,
+.petal-2 img {
+  animation-delay: 0.5s;
+}
+
+/* 오른쪽 세 번째 꽃잎은 0.7초 뒤 출발 */
+.petal-right.petal-3,
+.petal-right.petal-3 img {
+  animation-delay: 0.7s;
+}
+
+/* 오른쪽 세 번째 꽃잎의 좌우 움직임 */
+.petal-right.petal-3 img {
+  animation-direction: reverse;
+}
+
+/* 나비가 날아다니는 동작 */
+@keyframes butterfly-float {
+  0%,
+  100% {
+    margin-left: 30px;
+    bottom: 80px;
+  }
+
+  25% {
+    margin-left: 45px;
+    bottom: 110px;
+  }
+
+  50% {
+    margin-left: 60px;
+    bottom: 140px;
+  }
+
+  75% {
+    margin-left: -60px;
+    bottom: 120px;
+  }
+}
+
+/* 나비가 커졌다가 돌아오기 */
+@keyframes big1 {
+  0%,
+  100% {
+    width: 83.333%;
+  }
+
+  40% {
+    width: 100%;
+  }
+}
+
+@keyframes big2 {
+  0%,
+  100% {
+    width: 83.333%;
+  }
+
+  40% {
+    width: 100%;
+  }
+}
+
+/* 빛이 나타났다 사라지기 */
+@keyframes light1 {
+  0%,
+  100% {
+    width: 83.333%;
+    opacity: 0;
+  }
+
+  40% {
+    width: 100%;
+    opacity: 0.9;
+  }
+}
+
+@keyframes light2 {
+  0%,
+  100% {
+    width: 83.333%;
+    opacity: 0;
+  }
+
+  40% {
+    width: 100%;
+    opacity: 0.9;
+  }
+}
+
+/* 왼쪽 꽃잎 */
+@keyframes flower1 {
+  0% {
+    bottom: 100%;
+    margin-bottom: -115px;
+    opacity: 0;
+    transform: rotate(-45deg);
+  }
+
+  10% {
+    bottom: 100%;
+    margin-bottom: -134px;
+    opacity: 1;
+    transform: rotate(-45deg);
+  }
+
+  90% {
+    bottom: 4vh;
+    margin-bottom: 0;
+    opacity: 1;
+    transform: rotate(45deg);
+  }
+
+  100% {
+    bottom: 3vh;
+    margin-bottom: 0;
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes flower2 {
+  0% {
+    bottom: 100%;
+    margin-bottom: -115px;
+    opacity: 0;
+    transform: rotate(-45deg);
+  }
+
+  10% {
+    bottom: 100%;
+    margin-bottom: -134px;
+    opacity: 1;
+    transform: rotate(-45deg);
+  }
+
+  90% {
+    bottom: 4vh;
+    margin-bottom: 0;
+    opacity: 1;
+    transform: rotate(45deg);
+  }
+
+  100% {
+    bottom: 3vh;
+    margin-bottom: 0;
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+}
+
+/* 오른쪽 꽃잎 */
+@keyframes right1 {
+  0% {
+    bottom: 100%;
+    margin-bottom: -165px;
+    opacity: 0;
+    transform: rotate(-45deg);
+  }
+
+  10% {
+    bottom: 100%;
+    margin-bottom: -179px;
+    opacity: 1;
+    transform: rotate(-45deg);
+  }
+
+  90% {
+    bottom: 4vh;
+    margin-bottom: 0;
+    opacity: 1;
+    transform: rotate(45deg);
+  }
+
+  100% {
+    bottom: 3vh;
+    margin-bottom: 0;
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes right2 {
+  0% {
+    bottom: 100%;
+    margin-bottom: -165px;
+    opacity: 0;
+    transform: rotate(-45deg);
+  }
+
+  10% {
+    bottom: 100%;
+    margin-bottom: -179px;
+    opacity: 1;
+    transform: rotate(-45deg);
+  }
+
+  90% {
+    bottom: 4vh;
+    margin-bottom: 0;
+    opacity: 1;
+    transform: rotate(45deg);
+  }
+
+  100% {
+    bottom: 3vh;
+    margin-bottom: 0;
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+}
+
+/* 양쪽 꽃잎이 좌우로 움직이는 동작 */
+@keyframes petal1 {
+  0% {
+    left: 0;
+  }
+
+  25% {
+    left: -35px;
+  }
+
+  50% {
+    left: 30px;
+  }
+
+  75% {
+    left: -15px;
+  }
+
+  100% {
+    left: 40px;
+  }
+}
+
+@keyframes petal2 {
+  0% {
+    left: 0;
+  }
+
+  25% {
+    left: -35px;
+  }
+
+  50% {
+    left: 30px;
+  }
+
+  75% {
+    left: -15px;
+  }
+
+  100% {
+    left: 40px;
+  }
+}
+
+/* 왼쪽 꽃 전체 흔들기 */
+@keyframes left-move1 {
+  0%,
+  100% {
+    margin-left: 0;
+  }
+
+  25% {
+    margin-left: -1.1vh;
+  }
+
+  75% {
+    margin-left: 1.1vh;
+  }
+}
+
+@keyframes left-move2 {
+  0%,
+  100% {
+    margin-left: 0;
+  }
+
+  25% {
+    margin-left: -1.1vh;
+  }
+
+  75% {
+    margin-left: 1.1vh;
+  }
+}
+
+/* 오른쪽 꽃 전체 흔들기 */
+
+/* 오른쪽 꽃이 위로 살짝 움직였다가 돌아오기 */
+@keyframes right-move1 {
+  0%,
+  100% {
+    bottom: 0;
+  }
+
+  25% {
+    bottom: 6px;
+  }
+
+  75% {
+    bottom: 2px;
+  }
+}
+
+@keyframes right-move2 {
+  0%,
+  100% {
+    bottom: 0;
+  }
+
+  25% {
+    bottom: 6px;
+  }
+
+  75% {
+    bottom: 2px;
+  }
+}
+
+/* 마우스를 따라 움직일 빛 */
+.water-light {
+  width: 600px;
+  height: 280px;
+  background-color: #bdcdf3;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: translate(-50%, -50%);
+  filter: blur(55px);
+  opacity: 0;
+
+  transition: opacity 0.25s ease;
+}
+
+.hanok-closed {
+  width: 100%;
+}
+
+.hanok-open {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.poster.open .hanok-open {
+  opacity: 1;
+}
+
+/* 가운데에서 바깥쪽으로 반사가 서서히 사라지게 */
+/* 물 전체를 덮는 반사 영역 */
+.water-view {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: none;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+/* 배경색과 반사 이미지가 함께 드러나는 영역 */
+.water-cut {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    #efdedb 0%,
+    #bbe6ee 35%,
+    #8acdf0 70%,
+    #739ce9 100%
+  );
+
+  mask-image: radial-gradient(
+    ellipse 380px 180px at -1000px -1000px,
+    black 0%,
+    transparent 100%
+  );
+}
+
+.hanok-water {
+  width: 130vh;
+  height: auto;
+  position: absolute;
+
+  top: -7vh;
+  left: 50%;
+  margin-left: -0.5vh;
+  transform: translateX(-50%);
+
+  opacity: 1;
+}
+
+.hanok-water img {
+  width: 100%;
+  height: auto;
+}
+
+/* 한글 전시명 */
+.poster-name {
+  width: 100%;
+  position: absolute;
+  top: 24vh;
+  left: 0;
+
+  text-align: center;
+  font-size: 3vh;
+  font-weight: 700;
+  letter-spacing: 0.5vw;
+  line-height: 1.4;
+  color: #080d24;
+}
+
+/* 소개 문구 */
+/* 제목 아래 전시 소개 */
+.poster-copy {
+  width: 50%;
+  position: absolute;
+  top: 29vh;
+  left: 25%;
+
+  text-align: center;
+  color: #172342;
+}
+
+/* 작은 영문으로 전시 종류 표시 */
+.poster-type {
+  font-size: 1.25vh;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.18vw;
+}
+
+/* 왼쪽 세로 문구 */
+.poster-text {
+  width: 6vw;
+  position: absolute;
+  top: 25vh;
+  left: 5vw;
+
+  margin-top: 0;
+  font-size: 2vh;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0;
+  text-align: center;
+  color: #172342;
+}
+
+/* 첫 번째 세로줄 */
+.text-first {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* 두 번째 세로줄 */
+.text-second {
+  position: absolute;
+  top: 0;
+  left: 2.5vw;
+}
+
+/* 큰 날짜 위에 붙는 작은 설명 */
+.poster-date .poster-label,
+.poster-place .poster-label {
+  margin-bottom: 0.7vh;
+
+  font-size: 1.5vh;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.08vw;
+}
+
+/* 양옆 전시 정보 */
+.poster-date,
+.poster-place {
+  width: 18vw;
+  position: absolute;
+  top: 49vh;
+  color: #080d24;
+}
+
+.poster-date {
+  left: 4vw;
+  text-align: left;
+}
+
+.poster-place {
+  right: 4vw;
+  text-align: right;
+}
+
+/* 전시 기간, 전시 장소 같은 작은 제목 */
+.poster-label {
+  font-size: 2vh;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* 실제 날짜와 장소 */
+.poster-value {
+  font-size: 4.2vh;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-top: 0.8vh;
+}
+
+/* 날짜 아래 관람 정보 */
+.poster-small {
+  margin-top: 1vh;
+  font-size: 1.5vh;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.06vw;
+}
+
+/* 물 하단 중앙 문구 */
+.poster-bottom {
+  width: 50%;
+  position: absolute;
+  bottom: 30vh;
+  left: 25%;
+
+  text-align: center;
+  color: #b2c4e6;
+  font-size: 1.6vh;
+  line-height: 1.6;
+  letter-spacing: 2px;
+}
+
+/* 날짜 두 줄의 간격 */
+.poster-date .poster-value,
+.poster-place .poster-value {
+  margin-top: 0;
+  line-height: 1.15;
+}
+
+/* 장소명: 하단 중앙 */
+.poster-location {
+  width: 50%;
+  position: absolute;
+  bottom: 4vh;
+  left: 25%;
+
+  text-align: center;
+  color: #8fb5ff;
+}
+
+.location-en {
+  display: inline-block;
+  position: relative;
+
+  font-family: "Tektur", sans-serif;
+  font-size: 8vh;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.3vw;
+  margin-top: 1vh;
+
+  cursor: pointer;
+
+  transition:
+    color 0.6s ease,
+    text-shadow 0.6s ease;
+}
+
+/* 장소 정보 */
+.location-info {
+  width: 100%;
+  position: absolute;
+  bottom: 100%;
+  margin-bottom: 1vh;
+  left: 0;
+
+  font-family: sans-serif;
+  font-size: 2.2vh;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.12vw;
+  text-align: center;
+
+  color: #dcecff;
+  text-shadow: 0 0 10px rgba(166, 216, 255, 0.6);
+
+  opacity: 0;
+  transform: translateY(4px);
+
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+/* 클릭하면 Gwanghwamun이 빛나기 */
+.location-en:hover {
+  color: #effcff;
+
+  text-shadow:
+    0 0 12px rgba(142, 225, 255, 0.9),
+    0 0 30px rgba(255, 177, 226, 0.7);
+}
+
+/* 클릭하면 위치 상세정보 나타나기 */
+.location-en:hover .location-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.water-wave {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: translate(-50%, -50%);
+  opacity: 0;
+
+  animation-duration: 1.6s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+.water-wave svg {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes water1 {
+  0% {
+    width: 20px;
+    height: 7px;
+    opacity: 0.8;
+  }
+
+  100% {
+    width: 240px;
+    height: 80px;
+    opacity: 0;
+  }
+}
+
+@keyframes water2 {
+  0% {
+    width: 20px;
+    height: 7px;
+    opacity: 0.8;
+  }
+
+  100% {
+    width: 240px;
+    height: 80px;
+    opacity: 0;
+  }
+}
+
+/* 꽃잎이 좌우로 움직이도록 설정 */
+.petal-left img,
+.petal-right img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  left: 0;
+
+  animation-duration: 2.6s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+/* 꽃잎이 닿는 곳의 작은 파동 */
+.flower-wave {
+  width: 0;
+  height: 0;
+  position: absolute;
+
+  bottom: 4vh;
+  margin-left: 66px;
+  transform: translate(-50%, 50%);
+
+  animation-duration: 1.4s;
+  animation-delay: 2.6s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: backwards;
+}
+
+/* 왼쪽 꽃잎의 도착 위치 */
+.flower-wave-left.wave-1 {
+  left: 80%;
+}
+
+.flower-wave-left.wave-2 {
+  left: 72%;
+}
+
+/* 오른쪽 꽃잎의 도착 위치 */
+.flower-wave-right.wave-1 {
+  left: 22%;
+}
+
+.flower-wave-right.wave-2 {
+  left: 28%;
+}
+
+/* 세 번째 꽃잎은 좌우 움직임이 반대이므로 위치도 다름 */
+.flower-wave-right.wave-3 {
+  left: 34%;
+  margin-left: 37.5px;
+  bottom: 3vh;
+  margin-bottom: 37.5px;
+}
+
+/* 꽃잎의 출발 지연만큼 파동도 늦게 시작 */
+.flower-wave.wave-2 {
+  animation-delay: 3.1s;
+}
+
+.flower-wave.wave-3 {
+  animation-delay: 3.3s;
+}
+
+@keyframes flower-water1 {
+  0% {
+    width: 10px;
+    height: 3px;
+    opacity: 0;
+  }
+  10% {
+    width: 40px;
+    height: 13px;
+    opacity: 0.75;
+  }
+  100% {
+    width: 180px;
+    height: 60px;
+    opacity: 0;
+  }
+}
+
+@keyframes flower-water2 {
+  0% {
+    width: 10px;
+    height: 3px;
+    opacity: 0;
+  }
+  10% {
+    width: 40px;
+    height: 13px;
+    opacity: 0.75;
+  }
+  100% {
+    width: 180px;
+    height: 60px;
+    opacity: 0;
+  }
+}
+
+/* 작은 나비의 발광 이미지 */
+.butterfly-2 .light-img,
+.butterfly-3 .light-img {
+  filter: none;
+}
+
+/* 한 화면 안에서 보는 포스터 */
+html,
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+/* 물 위의 빛 알갱이 */
+.water-dot {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    #ffffff 0%,
+    #e0ffff 18%,
+    #a6edff 35%,
+    rgba(166, 237, 255, 0.3) 55%,
+    transparent 75%
+  );
+
+  opacity: 0.5;
+
+  animation: dot-move 5s ease-in-out infinite;
+}
+
+/* 알갱이마다 크기와 위치를 다르게 */
+.dot-1 {
+  left: 8%;
+  bottom: 40%;
+}
+
+.dot-2 {
+  width: 30px;
+  height: 30px;
+  left: 16%;
+  bottom: 75%;
+  animation-delay: 0.8s;
+}
+
+.dot-3 {
+  width: 32px;
+  height: 32px;
+  left: 27%;
+  bottom: 22%;
+  animation-delay: 1.6s;
+}
+
+.dot-4 {
+  width: 40px;
+  height: 40px;
+  left: 39%;
+  bottom: 62%;
+  animation-delay: 0.4s;
+}
+
+.dot-5 {
+  left: 60%;
+  bottom: 48%;
+  animation-delay: 2s;
+}
+
+.dot-6 {
+  width: 18px;
+  height: 18px;
+  left: 73%;
+  bottom: 76%;
+  animation-delay: 1.2s;
+}
+
+.dot-7 {
+  width: 30px;
+  height: 30px;
+  left: 84%;
+  bottom: 24%;
+  animation-delay: 2.4s;
+}
+
+.dot-8 {
+  width: 20px;
+  height: 20px;
+  left: 94%;
+  bottom: 65%;
+  animation-delay: 0.6s;
+}
+
+/* 살짝 떠오르면서 밝아졌다가 돌아오기 */
+@keyframes dot-move {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 0.9;
+    transform: translateY(-14px);
+  }
+}
+/* 큰 타원 */
+.water-wave img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* 큰 타원 가운데에 작은 타원 배치 */
+.water-wave .wave-small {
+  width: 60%;
+  height: 60%;
+  top: 20%;
+  left: 20%;
+}
+/* 나비 클릭 동작의 시간과 속도 */
+.butterfly .butterfly-img,
+.butterfly .light-img {
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+}
+
+/* 꽃 전체가 흔들리는 시간과 속도 */
+.flower-left,
+.flower-right {
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+}
